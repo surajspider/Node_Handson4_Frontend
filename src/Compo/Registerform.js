@@ -26,7 +26,10 @@ function Registerform() {
                 // setStore(res.data);
                 alert(res.data.msg);
                 localStorage.setItem("token", res.data.token);
-                navi("/");
+                if (res.data.msg === "User Registered Successfully!") {
+                    navi("/");
+                }
+
             })
             .catch(err => console.log(err));
         // axios.post('http://localhost:5000/api/register', data)
