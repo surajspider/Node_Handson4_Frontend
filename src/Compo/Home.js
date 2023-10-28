@@ -12,7 +12,7 @@ function Home() {
 
     useEffect(() => {
         if (token) {
-            axios.get("https://handson4backend.onrender.com", { headers: { "authorization": `Bearer ${token}` } })
+            axios.get("https://handson4backend.onrender.com/api/", { headers: { "authorization": `Bearer ${token}` } })
                 .then((res) => {
                     console.log(res.data);
                     // alert(res.data.msg);
@@ -20,7 +20,7 @@ function Home() {
                 .catch(err => console.log(err))
         }
         else {
-            navi("/login");
+            navi("/register");
         }
     }, [token, navi])
     return (

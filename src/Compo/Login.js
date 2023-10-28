@@ -20,6 +20,7 @@ function Login() {
                 alert(res.data.msg);
                 // setStore(res.data);
                 localStorage.setItem("token", res.data.token);
+                // navi("/");
                 if (res.data.msg === "User logged in Successfully!") {
                     navi("/");
                 }
