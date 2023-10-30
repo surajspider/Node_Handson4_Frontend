@@ -11,7 +11,7 @@ function Home() {
     }
 
     useEffect(() => {
-        if (token) {
+        if ((token) && (token !== "undefined")) {
             axios.get("https://handson4backend.onrender.com/api/", { headers: { "authorization": `Bearer ${token}` } })
                 .then((res) => {
                     console.log(res.data);

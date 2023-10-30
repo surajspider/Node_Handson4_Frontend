@@ -29,7 +29,6 @@ function Registerform() {
                 if (res.data.msg === "User Registered Successfully!") {
                     navi("/");
                 }
-
             })
             .catch(err => console.log(err));
         // axios.post('http://localhost:5000/api/register', data)
